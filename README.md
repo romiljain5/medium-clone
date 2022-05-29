@@ -44,6 +44,10 @@ SANITY_API_TOKEN=
 - Interfaces are better the type, becoz in interface you can do extending, means you can inherit types from other types
 - typings.d.ts file means definition typescript file, It is about how we store type definitions
 - NextJs SSR -> Nextjs server prebuilds the page, /page per request
+- if you visit a page which does not exist with /post/anyname then it will give 404 error
+- we have used [slug].js for linking posts to page according to slugs which we get from sanity schema
+- used revalidate from sanity so after 60 sec, it'll update the old cache, will delete old cache and had new one, so page can get changes automatically
+
 
 ### Usefull Links
 
