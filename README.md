@@ -1,5 +1,6 @@
 # Medium Clone
 
+- Checkout medium blog on vercel - https://medium-clone-k1feq3m45-jromil51-gmailcom.vercel.app 
 - Build Medium blog clone with NEXT.JS, ReactJs, TypeScript, Sanity CMS, GROQ (similar to graphQL), React, Tailwind CSS, ISR((Incremental Static Regeneration)) , next-sanity, react-portable-text
 - typings.d.ts file means definition typescript file, It is about how we store type definitions
 - NextJs SSR -> Nextjs server prebuilds the page, /page per request
@@ -11,6 +12,9 @@
 - react-portable-text - An easy way to render Portable Text block content in React applications. (you cannot edit img tag in specializers)
 - Used react-hook-form for form validations → [https://react-hook-form.com](https://react-hook-form.com/)
 - comment will get showed only after approval of moderator
+
+### Project Video
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/xkWIAKZOrrc/0.jpg)](https://www.youtube.com/watch?v=xkWIAKZOrrc)
 
 ### Usefull commands
 
