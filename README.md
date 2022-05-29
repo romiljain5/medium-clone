@@ -9,6 +9,8 @@
     - ISR (Incremental Static Regeneration) → Next.js allows you to create or update static pages after you've built your site. Incremental Static Regeneration (ISR) enables you to use static-generation → https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
     - using revalidate
 - react-portable-text - An easy way to render Portable Text block content in React applications. (you cannot edit img tag in specializers)
+- Used react-hook-form for form validations → [https://react-hook-form.com](https://react-hook-form.com/)
+- comment will get showed only after approval of moderator
 
 ### Usefull commands
 
@@ -50,6 +52,8 @@ SANITY_API_TOKEN=
 ### Tips
 
 - Interfaces are better the type, becoz in interface you can do extending, means you can inherit types from other types
+- if you are using .then then you don’t need to use await async
+- API_TOKEN_KEY allows us to read and write to database in sanity
 
 ### Usefull Links
 
