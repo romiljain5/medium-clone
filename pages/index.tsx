@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Header from '../components/Header'
-import { sanityClient } from '../sanity'
+import { sanityClient, urlFor } from '../sanity'
 import { Post } from '../typings'
 
 //Interfaces are better the type, becoz in interface you can do extending, means you can inherit types from other types
 interface Props {
-  posts: Post[];
+  posts: Post[]
 }
 
 const Home = ({ posts }: Props) => {
@@ -43,6 +44,37 @@ const Home = ({ posts }: Props) => {
       </div>
 
       {/* Posts  */}
+      <div
+        className="md grid grid-cols-1 gap-3 gap-6 p-2
+      sm:grid-cols-2 md:p-6 lg:grid-cols-3"
+      >
+        {posts.map((post) => (
+          <Link key={post._id} href={`/post/${post.slug.current}`}>
+            <div className="group cursor-pointer rounded-lg border overflow-hidden">
+              {/* ! mark ensures its not null */}
+              <img
+                className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                src={urlFor(post.mainImage).url()!}
+                alt=""
+              />
+              <div className="flex justify-between bg-white p-5">
+                <div>
+                  <p className='text-lg font-bold'>{post.title}</p>
+                  <p className='text-xs'>
+                    {post.description} by {post.author.name}
+                  </p>
+                </div>
+
+                <img
+                  className="h-12 w-12 rounded-full"
+                  src={urlFor(post.author.image).url()}
+                  alt=""
+                />
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
@@ -61,13 +93,13 @@ export const getServerSideProps = async () => {
   slug,
   }`
 
-  const posts = await sanityClient.fetch(query);
+  const posts = await sanityClient.fetch(query)
 
   return {
     props: {
       posts,
     },
-  };
+  }
 }
 
 export default Home
