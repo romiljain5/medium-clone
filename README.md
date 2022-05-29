@@ -1,6 +1,14 @@
 # Medium Clone
 
-- Build Medium blog clone with NEXT.JS, ReactJs, TypeScript, Sanity CMS, GROQ (similar to graphQL), React, Tailwind CSS, ISR, next-sanity
+- Build Medium blog clone with NEXT.JS, ReactJs, TypeScript, Sanity CMS, GROQ (similar to graphQL), React, Tailwind CSS, ISR((Incremental Static Regeneration)) , next-sanity, react-portable-text
+- typings.d.ts file means definition typescript file, It is about how we store type definitions
+- NextJs SSR -> Nextjs server prebuilds the page, /page per request
+- if you visit a page which does not exist with /post/anyname then it will give 404 error
+- we have used [slug].js for linking posts to page according to slugs which we get from sanity schema
+- used revalidate from sanity so after 60 sec, it'll update the old cache, will delete old cache and had new one, so page can get changes automatically
+    - ISR (Incremental Static Regeneration) → Next.js allows you to create or update static pages after you've built your site. Incremental Static Regeneration (ISR) enables you to use static-generation → https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
+    - using revalidate
+- react-portable-text - An easy way to render Portable Text block content in React applications. (you cannot edit img tag in specializers)
 
 ### Usefull commands
 
@@ -42,13 +50,9 @@ SANITY_API_TOKEN=
 ### Tips
 
 - Interfaces are better the type, becoz in interface you can do extending, means you can inherit types from other types
-- typings.d.ts file means definition typescript file, It is about how we store type definitions
-- NextJs SSR -> Nextjs server prebuilds the page, /page per request
-- if you visit a page which does not exist with /post/anyname then it will give 404 error
-- we have used [slug].js for linking posts to page according to slugs which we get from sanity schema
-- used revalidate from sanity so after 60 sec, it'll update the old cache, will delete old cache and had new one, so page can get changes automatically
-
 
 ### Usefull Links
 
 - next-sanity → https://www.npmjs.com/package/next-sanity
+- ISR (Incremental Static Regeneration) → https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
+- react-portable-text → https://www.npmjs.com/package/react-portable-text
