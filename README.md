@@ -55,7 +55,7 @@ SANITY_API_TOKEN=
 
 ### Tips
 
-- Interfaces are better the type, becoz in interface you can do extending, means you can inherit types from other types
+- Interfaces are better type, because in interface you can do extending, means you can inherit types from other types
 - if you are using .then then you don’t need to use await async
 - API_TOKEN_KEY allows us to read and write to database in sanity
 
